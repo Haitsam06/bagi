@@ -1,0 +1,19 @@
+<?php
+
+namespace App\Models;
+
+use MongoDB\Laravel\Eloquent\Model;
+
+class Mahasiswa extends Model
+{
+    protected $connection = 'mongodb';
+    protected $table = 'mahasiswa';
+
+    protected $fillable = [
+        'nama',
+        'nim',
+        'jenis_kelamin',
+        'usia',
+        'prodi',
+    ];
+}
