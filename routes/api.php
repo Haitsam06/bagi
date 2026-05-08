@@ -14,6 +14,9 @@ Route::get('/user', function () {
     return User::all();
 });
 
+Route::get('/mahasiswa/export_excel', [MahasiswaController::class, 'export_excel']);
+Route::get('/mahasiswa/export_pdf', [MahasiswaController::class, 'export_pdf']);
+
 Route::get('/mahasiswa', [MahasiswaController::class, 'index']);
 Route::post('/mahasiswa', [MahasiswaController::class, 'store']);
 Route::get('/mahasiswa/{id}', [MahasiswaController::class, 'show']);
